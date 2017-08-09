@@ -1,0 +1,27 @@
+extends ../layout
+
+block content
+
+      .form-group.col-lg-6.col-lg-offset-3.col-md-6.col-md-offset-3.col-sm-12.col-xs-12
+        h1 TO-DO List
+        form(action="/tasks", method="POST")
+          .input-group
+            input.form-control.input-lg(type='text', placeholder='Any new To-Do?' name="task", autofocus)
+            span.input-group-btn
+              button.btn.btn-lg.btn-info Add Task
+      div.col-lg-6.col-lg-offset-3.col-md-6.col-md-offset-3.col-sm-12.col-xs-12
+        ul.list-group#todoList
+          each task, i in tasks
+            li.list-group-item.task-item(id=task.id, class=task.done && 'task-done')
+              .row
+                .col-md-6.col-sm-6.col-xs-6
+                  span.title(contentEditable="false")=task.title
+                  span.creationDate=' Created on: ' + task.creationDate + ' '
+                .button-group.col-md-4.col-md-offset-1.col-sm-4.col-sm-offset-1.col-xs-4
+                  button.btn.btn-danger.remove.pull-right(id=task.id)
+                    span.glyphicon.glyphicon-remove
+                  button.btn.btn-success.done.pull-right(id=task.id)
+                    span.glyphicon.glyphicon-ok
+              
+                
+                

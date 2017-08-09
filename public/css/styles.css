@@ -1,0 +1,58 @@
+.footer{
+	background:black;
+	color:white; font-style:italic;
+}
+
+.list-group-item .creationDate{
+	color:grey;
+	font-size:70%;
+}
+
+.task-done-box{
+  background: #757575;
+}
+
+.task-done-text{
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+.footer{
+  border-radius: 4px;
+}
+
+.list-group-item .btn{
+  margin-top:20px;
+  margin-left:5px;
+  border-radius: 0;
+}
+
+.list-group-item:hover{
+  background:#FAED99;
+}
+
+.button-group{
+  padding:0;
+}
+
+#todoList{
+  margin: 0 auto;
+  _width:500px;
+}
+
+.navbar{
+  margin-bottom:0;
+}
+
+.footer{
+  margin-top:15px;
+}
+
+.title{
+  font-size:150%;
+  font-weight: bold;
+}
+
+.creationDate{
+  display:block;
+}
